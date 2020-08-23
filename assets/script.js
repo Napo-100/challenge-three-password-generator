@@ -27,7 +27,7 @@ function resetStart() {
 function generatePassword() {
     var passLength = parseInt(prompt("How long would you like your password to be? Must be at least 8 characters and no more than 128."));
     if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
-        alert("Password length must be at least 8 characters and no more than 128 characters! Please start over.");
+        alert("Password length must be at least 8 characters and no more than 128 characters! Please enter a valid NUMBER.");
         return null;
     }
 
