@@ -31,15 +31,15 @@ function generatePassword() {
         return null;
     }
 
-    var passUpper = confirm("Would you Like uppercase letters?");
-    var passLower = confirm("Would you Like lowercase letters?");
-    var passNumber = confirm("Would you Like numbers?");
+    var passUpper = confirm("Would you like uppercase letters?");
+    var passLower = confirm("Would you like lowercase letters?");
+    var passNumber = confirm("Would you like numbers?");
     var passSymbol = confirm("Would you like symbols?");
     var userChoices = [];
     
     if (!passUpper && !passLower && !passNumber && !passSymbol) {
       alert("You must make at least one character type selection! Click 'Generate Password' button to try again.")
-      return;
+      return null;
     }
 
     if (passUpper) {
