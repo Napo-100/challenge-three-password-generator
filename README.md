@@ -7,4 +7,8 @@ Click <a href ="https://napo-100.github.io/challenge-three-password-generator/">
 
 <img src="assets\images\screencapture-napo-100-github-io-challenge-three-password-generator-2020-08-22-21_23_32.png">
 
+
+
 ### Built with Visual Studio Code
+</br>
+Languages: HTML, CSS, JavaScript

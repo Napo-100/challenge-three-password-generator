@@ -13,8 +13,7 @@ function writePassword() {
 
     var password = generatePassword();
     
-    passwordText.value = password;
-    
+    passwordText.value = password; 
   }
 
 // Add event listener to generate button
@@ -24,10 +23,17 @@ function resetStart() {
   char = []
   writePassword();
 }
+
+// Password Parameters set here
 function generatePassword() {
     var passLength = parseInt(prompt("How long would you like your password to be? Must be at least 8 characters and no more than 128."));
-    if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
+    if (passLength < 8 || passLength > 128) { 
         alert("Password length must be at least 8 characters and no more than 128 characters! Please enter a valid NUMBER.");
+        return generatePassword();
+    }
+
+    if (isNaN(passLength)) {
+        alert("You must enter a NUMBER!\n(8-128)\nClick 'Generate Password' button to try again.")
         return null;
     }
 
@@ -36,7 +42,9 @@ function generatePassword() {
     var passNumber = confirm("Would you like numbers?");
     var passSymbol = confirm("Would you like symbols?");
     var userChoices = [];
+ 
     
+// No choices made will not return a password
     if (!passUpper && !passLower && !passNumber && !passSymbol) {
       alert("You must make at least one character type selection! Click 'Generate Password' button to try again.")
       return null;
@@ -62,11 +70,8 @@ function generatePassword() {
         var randomNum = Math.floor(Math.random() * userChoices.length);
         var character = userChoices[randomNum];
         console.log(character);
-
         char.push(character);
-
     }
 
     return char.join("");
-
 }
