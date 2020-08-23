@@ -10,5 +10,4 @@ Click <a href ="https://napo-100.github.io/challenge-three-password-generator/">
 
 
 ### Built with Visual Studio Code
-</br>
 Languages: HTML, CSS, JavaScript
